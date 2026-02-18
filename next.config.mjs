@@ -4,29 +4,12 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   output: "standalone",
-  env: {
-    NEXT_PUBLIC_SITE_URL:'https://www.stonediscover.com/',
-    NEXT_PUBLIC_MAIN_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend',
-    NEXT_PUBLIC_PRODUCTS_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/products',
-    NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/productdetails',
-    NEXT_PUBLIC_PRODUCT_CATEGORY_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/categories',
-    NEXT_PUBLIC_CATEGORY_CHILD_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/productscategory',
-    NEXT_PUBLIC_DETSILS_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/categorydetails',
-    NEXT_PUBLIC_IMAGE:'https://stonediscoverusaapi.onrender.com/uploads',
-    NEXT_PUBLIC_BLOG_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/blogs',
-    NEXT_PUBLIC_BLOG_PREVIEW_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/blogs/preview',
-    NEXT_PUBLIC_CATEGORY_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/blog/categories',
-    NEXT_PUBLIC_AUTHOR_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/blog/authors',
-    NEXT_PUBLIC_AUTHOR_BLOG_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/blogs/author/',
-    NEXT_PUBLIC_BLOG_API_Image:'https://stonediscoverusaapi.onrender.com/uploads',
-    NEXT_PUBLIC_BLOG_API_Image_profilePics:'https://stonediscoverusaapi.onrender.com/uploads'
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",  
-        hostname: "stonediscoverusaapi.onrender.com",
+        hostname: "aeroadvisior.vercel.app",
         port: "",
       pathname: '/uploads/**',
       },

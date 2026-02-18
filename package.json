@@ -1,10 +1,10 @@
 {
-  "name": "stoneuk",
+  "name": "aeroadvisior",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx next-sitemap --config next-sitemap.config.js",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
