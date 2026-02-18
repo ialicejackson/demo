@@ -1,112 +1,173 @@
 import Head from "next/head";
 
-export default function Home() {
+export default function MicrosoftCloud() {
   return (
     <>
       <Head>
         <title>
-          Microsoft Cloud: Complete Guide to Azure, Microsoft 365 & Dynamics 365
+          About Microsoft Cloud | Azure, Microsoft 365 & Dynamics 365
         </title>
 
         <meta
           name="description"
-          content="Learn everything about Microsoft Cloud including Azure, Microsoft 365, Dynamics 365 and Power Platform. Discover benefits, security features, and how it helps businesses scale."
+          content="Discover how Microsoft Cloud helps businesses transform with Azure, Microsoft 365, Dynamics 365 and Power Platform."
         />
-
-        <meta
-          name="keywords"
-          content="Microsoft Cloud, Azure, Microsoft 365, Dynamics 365, Power Platform, Cloud Computing, ERP, CRM"
-        />
-
-        <meta name="author" content="Your Company Name" />
 
         <link
           rel="canonical"
-          href="https://www.stonediscoveasdasdr.com/microsoft-cloud"
+          href="https://www.yoursite.com/microsoft-cloud"
         />
-
-        <meta name="robots" content="index, follow" />
       </Head>
 
-        <section>
-          <h1>Microsoft Cloud: The Complete Guide for Modern Businesses</h1>
+      <main>
 
-          <p>
-            Microsoft Cloud is a powerful ecosystem of cloud-based services
-            designed to help businesses scale, innovate, and operate securely.
-            It combines infrastructure, productivity tools, ERP, CRM, and
-            analytics into one unified platform.
-          </p>
-
-          <h2>What is Microsoft Cloud?</h2>
-          <p>
-            Microsoft Cloud is a collection of services delivered through
-            Microsoft’s global data centers. It allows businesses to store data,
-            run applications, collaborate remotely, and access AI-driven
-            insights without managing physical servers.
-          </p>
-
-          <h2>Core Components of Microsoft Cloud</h2>
-
-          <h3>1. Microsoft Azure</h3>
-          <p>
-            Microsoft Azure provides cloud infrastructure services including
-            virtual machines, databases, AI services, networking, and storage.
-            Businesses can scale their resources based on demand using
-            pay-as-you-go pricing.
-          </p>
-
-          <h3>2. Microsoft 365</h3>
-          <p>
-            Microsoft 365 includes productivity tools such as Word, Excel,
-            PowerPoint, Outlook, Teams, SharePoint, and OneDrive. It enables
-            real-time collaboration and secure remote work.
-          </p>
-
-          <h3>3. Dynamics 365</h3>
-          <p>
-            Dynamics 365 combines ERP and CRM solutions. It helps businesses
-            manage finance, sales, supply chain, inventory, and customer
-            relationships in a single integrated system.
-          </p>
-
-          <h3>4. Power Platform</h3>
-          <p>
-            Power Platform includes Power BI, Power Apps, and Power Automate.
-            It allows businesses to build custom apps, automate workflows, and
-            analyze data without heavy coding.
-          </p>
-
-          <h2>Benefits of Microsoft Cloud</h2>
-          <ul>
-            <li>Cost efficiency with no hardware investment</li>
-            <li>Instant scalability</li>
-            <li>Enterprise-level security</li>
-            <li>Remote accessibility</li>
-            <li>AI-powered business insights</li>
-          </ul>
-
-          <h2>Security & Compliance</h2>
-          <p>
-            Microsoft Cloud provides multi-factor authentication, encryption,
-            threat protection, and compliance with global standards like GDPR
-            and ISO certifications.
-          </p>
-
-          <h2>Why Businesses Choose Microsoft Cloud</h2>
-          <p>
-            Companies choose Microsoft Cloud because it integrates all major
-            business systems into one ecosystem. From infrastructure to
-            analytics, it supports digital transformation and long-term growth.
-          </p>
-
-          <h2>Conclusion</h2>
-          <p>
-            Microsoft Cloud is more than just a hosting platform. It is a
-            complete digital environment that helps businesses innovate faster,
-            reduce costs, and stay competitive in the modern era.
-          </p>
+        {/* Hero Section */}
+        <section className="bg-primary text-white text-center py-5">
+          <div className="container">
+            <h1 className="display-4 fw-bold">
+              About Microsoft Cloud
+            </h1>
+            <p className="lead mt-3">
+              Empowering Modern Businesses with Scalable, Secure & Intelligent Solutions
+            </p>
+          </div>
         </section>
+
+        {/* About Section */}
+        <section className="py-5 bg-light">
+          <div className="container">
+            <div className="row align-items-center">
+
+              <div className="col-lg-6">
+                <h2 className="fw-bold mb-4">
+                  What is Microsoft Cloud?
+                </h2>
+                <p className="text-muted">
+                  Microsoft Cloud is a comprehensive digital ecosystem that integrates
+                  infrastructure, productivity, business applications, and analytics
+                  into one seamless environment.
+                </p>
+                <p className="text-muted">
+                  It enables organizations to innovate faster, scale efficiently,
+                  and operate securely across global environments.
+                </p>
+              </div>
+
+              <div className="col-lg-6 text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                  alt="Cloud Technology"
+                  className="img-fluid rounded shadow"
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Core Services Section */}
+        <section className="py-5">
+          <div className="container text-center">
+
+            <h2 className="fw-bold mb-5">Core Components</h2>
+
+            <div className="row g-4">
+
+              <div className="col-md-3">
+                <div className="card border-0 shadow-sm h-100 p-3">
+                  <div className="card-body">
+                    <h5 className="fw-bold text-primary">Azure</h5>
+                    <p className="text-muted small">
+                      Cloud infrastructure including VMs, databases, networking, AI and DevOps tools.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-3">
+                <div className="card border-0 shadow-sm h-100 p-3">
+                  <div className="card-body">
+                    <h5 className="fw-bold text-primary">Microsoft 365</h5>
+                    <p className="text-muted small">
+                      Productivity tools like Word, Excel, Teams & Outlook for collaboration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-3">
+                <div className="card border-0 shadow-sm h-100 p-3">
+                  <div className="card-body">
+                    <h5 className="fw-bold text-primary">Dynamics 365</h5>
+                    <p className="text-muted small">
+                      Integrated ERP & CRM for finance, sales, and operations management.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-3">
+                <div className="card border-0 shadow-sm h-100 p-3">
+                  <div className="card-body">
+                    <h5 className="fw-bold text-primary">Power Platform</h5>
+                    <p className="text-muted small">
+                      Power BI, Apps & Automate to analyze data and streamline workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="bg-light py-5">
+          <div className="container text-center">
+
+            <h2 className="fw-bold mb-4">Why Choose Microsoft Cloud?</h2>
+
+            <div className="row mt-4 g-4">
+
+              <div className="col-md-4">
+                <div className="p-4 shadow-sm bg-white rounded">
+                  <h5 className="fw-bold">Scalability</h5>
+                  <p className="text-muted small">
+                    Scale infrastructure instantly as your business grows.
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="p-4 shadow-sm bg-white rounded">
+                  <h5 className="fw-bold">Enterprise Security</h5>
+                  <p className="text-muted small">
+                    Advanced compliance, identity protection, and threat detection.
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="p-4 shadow-sm bg-white rounded">
+                  <h5 className="fw-bold">AI & Automation</h5>
+                  <p className="text-muted small">
+                    Built-in AI capabilities and workflow automation tools.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="mt-5">
+              <button className="btn btn-primary btn-lg px-5">
+                Get Started Today
+              </button>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
     </>
   );
 }
