@@ -50,7 +50,7 @@ export default function Header() {
                 role="button"
                 data-bs-toggle="dropdown"
               >
-                Services
+                Companies
               </a>
               <ul className="dropdown-menu">
                 <li>
