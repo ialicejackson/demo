@@ -6,70 +6,63 @@ export default function ExpediaReviews() {
 
   const [reviews, setReviews] = useState([
     {
-      name: "Demo Reviewer 01",
+      name: "Parker",
       rating: 4,
       title: "Helpful booking support experience",
       review:
-        "Sample review: Expedia customer service information was useful when checking the available options for an existing flight reservation.",
-      type: "Customer Service",
+        "I contacted Expedia customer service +1-833-319-4929 after noticing an incorrect date on my hotel reservation. The representative was patient, verified my booking details, and explained the available options clearly. I appreciated that they did not rush the call and checked with the hotel before confirming the change. The process took a little longer than expected, but the issue was eventually resolved without losing my reservation. I also received an updated confirmation email shortly after the call. Overall, the experience was straightforward and helpful. I would recommend keeping your itinerary number ready because it makes the support process much easier and faster.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 02",
+      name: "Olivia",
       rating: 4,
       title: "Clear support options",
       review:
-        "Sample review: Expedia customer service information helped explain the available options for changing an existing booking.",
-      type: "Flight Change",
+        "My experience with Expedia customer service was positive when I needed help with a flight schedule change. The agent reviewed the airline’s updated timing, explained what alternatives were available, and helped me understand whether I could switch flights without additional charges. I had to wait a few minutes before reaching someone, but once connected, the conversation was professional and easy to follow. The representative repeated the new flight details before ending the call, which was useful. I received the revised itinerary by email soon afterward. Having all travel details ready before calling definitely helped make the process smoother for me.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 03",
+      name: "Liam",
       rating: 4,
       title: "Useful refund information",
       review:
-        "Sample review: Expedia customer service guidance made the cancellation and refund process easier to understand.",
-      type: "Cancellation / Refund",
+        "I reached out to Expedia customer service because my hotel reservation was not appearing correctly in the app. The support agent asked for my itinerary number, confirmed the booking with the property, and guided me through a few account steps. The issue turned out to be related to the email address connected with my reservation. After the details were corrected, the booking appeared normally. The representative stayed until I confirmed everything was visible. I liked that the instructions were simple and easy to follow. The overall interaction felt organised, and I continued planning my trip without any further booking problems.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 04",
+      name: "Anderson",
       rating: 4,
       title: "Simple reservation guidance",
       review:
-        "Sample review: Expedia customer service information was useful when reviewing an existing hotel reservation.",
-      type: "Hotel Booking",
+        "Expedia customer service helped me when I had questions about cancelling a prepaid hotel booking. The representative first checked the property’s cancellation rules and then explained which part of the reservation might be refundable. I appreciated that the agent clearly separated Expedia’s role from the hotel’s policy instead of promising something that could not be guaranteed. The refund was not immediate, but I was told what to expect and where to check the status. I received an email confirming the cancellation request. The information was clear and practical, and the support helped me understand the next steps without unnecessary confusion.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 05",
+      name: "Sophia",
       rating: 4,
       title: "Good flight change guidance",
       review:
-        "Sample review: Expedia customer service guidance clearly explained the available options for reviewing a flight change.",
-      type: "Flight Change",
+        "I contacted Expedia customer service after my airline changed one part of a connecting itinerary. I was worried that the new schedule would leave too little time for the connection. The agent reviewed the full trip, checked available alternatives, and explained which options required approval from the airline. Although the process involved some waiting, I appreciated updates while the representative researched the issue. Eventually, I was moved to a more suitable itinerary. The new confirmation arrived by email shortly after the call. The experience showed me that having flight numbers, dates, and the Expedia itinerary number ready can save time.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 06",
+      name: "Noah",
       rating: 4,
       title: "Easy to understand",
       review:
-        "Sample review: Expedia customer service information was presented clearly and helped explain available booking support options.",
-      type: "Customer Service",
+        "My recent conversation with Expedia customer service was about a charge I did not immediately recognise on my travel booking. The agent carefully reviewed the reservation and explained how the total had been divided between the room rate, taxes, and an additional property fee. The explanation matched the booking confirmation when I checked it closely. I appreciated that the representative did not dismiss my concern and instead walked through the charges one by one. The call was calm and professional, and I left with a much clearer understanding of the booking cost. It was a useful support experience overall today.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 07",
+      name: "Thompson",
       rating: 4,
       title: "Helpful cancellation information",
       review:
-        "Sample review: Expedia customer service guidance was useful for understanding cancellation and refund options.",
-      type: "Cancellation / Refund",
+        "I used Expedia customer service when I needed to update the guest name on a hotel reservation. The agent first confirmed whether the property allowed the change and then contacted the hotel for approval. I was informed that some booking details depend on the hotel’s own policy, which was helpful to understand. After approval, the representative updated the reservation and sent a fresh confirmation email. The process was not instant, but communication was clear throughout. I appreciated being told what happened at each stage. If you call for a similar issue, keep the booking number and correct guest information ready.",
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 08",
+      name: "Collins",
       rating: 4,
       title: "Good reservation support",
       review:
@@ -78,7 +71,7 @@ export default function ExpediaReviews() {
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 09",
+      name: "Lucas",
       rating: 4,
       title: "Useful travel support information",
       review:
@@ -87,7 +80,7 @@ export default function ExpediaReviews() {
       isDemo: true,
     },
     {
-      name: "Demo Reviewer 10",
+      name: "Martin",
       rating: 4,
       title: "Straightforward booking guidance",
       review:
