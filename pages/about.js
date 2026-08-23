@@ -11,7 +11,7 @@ export default function About() {
         />
         <link
           rel="canonical"
-          href="https://www.stonediscoveasdasdr.com/about"
+          href="https://getadvisor.vercel.app/about/"
         />
         <meta name="robots" content="index, follow" />
       </Head>
