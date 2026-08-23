@@ -161,7 +161,7 @@ export default function ExpediaReviews() {
   return (
     <>
       <Head>
-        <title>Expedia Reviews: Ratings & Customer Experiences</title>
+        <title>Expedia Customer Service Reviews: Ratings & Customer Experiences</title>
 
         <meta
           name="description"
