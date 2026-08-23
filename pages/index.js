@@ -5,18 +5,20 @@ export default function MicrosoftCloud() {
     <>
       <Head>
         <title>
-          About Microsoft Cloud | Azure, Microsoft 365 & Dynamics 365
+          GetAdvisor
         </title>
 
         <meta
           name="description"
-          content="Discover how Microsoft Cloud helps businesses transform with Azure, Microsoft 365, Dynamics 365 and Power Platform."
+          content="Getadvisor is a directory guide, get travel info easily."
         />
 
         <link
           rel="canonical"
           href="https://www.yoursite.com/microsoft-cloud"
         />
+      
+      <meta name="google-site-verification" content="zkM-tqQ3r13mNjdonXF80C_4pgcL4TecbjYP3aRW0y4" />
       </Head>
 
       <main>
@@ -25,7 +27,7 @@ export default function MicrosoftCloud() {
         <section className="bg-primary text-white text-center py-5">
           <div className="container">
             <h1 className="display-4 fw-bold">
-              About Microsoft Cloud
+              About
             </h1>
             <p className="lead mt-3">
               Empowering Modern Businesses with Scalable, Secure & Intelligent Solutions
