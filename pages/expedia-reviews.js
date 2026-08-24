@@ -175,6 +175,10 @@ export default function ExpediaReviews() {
 
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+          rel="canonical"
+          href="https://getadvisior.vercel.app/expedia-reviews/"
+        />
       </Head>
 
       <main>

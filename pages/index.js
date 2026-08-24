@@ -5,7 +5,7 @@ export default function MicrosoftCloud() {
     <>
       <Head>
         <title>
-          GetAdvisor
+          GetAdvisor | directory
         </title>
 
         <meta
@@ -15,7 +15,7 @@ export default function MicrosoftCloud() {
 
         <link
           rel="canonical"
-          href="https://www.yoursite.com/microsoft-cloud"
+          href="https://getadvisior.vercel.app/"
         />
       
       <meta name="google-site-verification" content="zkM-tqQ3r13mNjdonXF80C_4pgcL4TecbjYP3aRW0y4" />

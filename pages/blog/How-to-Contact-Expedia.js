@@ -61,6 +61,10 @@ export default function ContactExpediaCustomerService() {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
+        <link
+          rel="canonical"
+          href="https://getadvisior.vercel.app/blog/How-to-Contact-Expedia/"
+        />
       </Head>
 
       <Script
