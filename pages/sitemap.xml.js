@@ -39,7 +39,7 @@ function generateSiteMap() {
       const finalUrl =
         page === "/"
           ? `${BASE_URL}/`
-          : `${BASE_URL}${page}`;
+          : `${BASE_URL}${page}/`;
 
       return `
   <url>
