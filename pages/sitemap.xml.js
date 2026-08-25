@@ -1,39 +1,82 @@
+import fs from "fs";
+import path from "path";
+
 const BASE_URL = "https://getadvisior.vercel.app";
 
-const pages = [
-  "/",
-  "/about",
-  "/Asiana-Airlines-Contact",
-  "/expedia-reviews",
-  "/How-Do-I-Reach-Amtrak-Customer-Service",
-  "/JetBlue-Customer-Service-for-International-Flights",
-  "/JetBlue-Delayed-Flight",
-  "/JetBlue-Same-Day-Flight-Change",
-  "/royal-caribbean-Customer-Service",
-  "/ways-to-get-allegiant-air-to-respond-quickly",
+function getAllPages() {
+  const pagesDir = path.join(process.cwd(), "pages");
+  const routes = [];
 
-  "/blog/Airlines-phone-Numbers",
-  "/blog/delta-airlines-name-change",
-  "/blog/delta-airlines-rebooking-guide",
-  "/blog/delta-flight-cancellation-refund",
-  "/blog/delta-legal-name-change",
-  "/blog/delta-missed-flight",
-  "/blog/delta-reservation-help",
-  "/blog/delta-same-day-flight-change",
-  "/blog/expedia-customer-service",
-  "/blog/expedia-missed-flight",
-  "/blog/How-to-Cancel-a-JetBlue-Flight",
-  "/blog/how-to-cancel-Expedia-booking",
-  "/blog/How-to-Change-a-JetBlue-Flight",
-  "/blog/How-to-Change-an-Expedia-Flight",
-  "/blog/how-to-change-my-delta-flight",
-  "/blog/How-to-Contact-Expedia",
-  "/blog/How-to-get-Allegiant-Air-to-respond-quickly",
-  "/blog/How-to-Reach-JetBlue-Immediately",
-  "/blog/Ways-to-Reach-Expedia",
-];
+  function scanFolder(folderPath, routePrefix = "") {
+    const files = fs.readdirSync(folderPath);
+
+    files.forEach((file) => {
+      const fullPath = path.join(folderPath, file);
+      const stat = fs.statSync(fullPath);
+
+      // If folder, scan inside it
+      if (stat.isDirectory()) {
+        scanFolder(fullPath, `${routePrefix}/${file}`);
+        return;
+      }
+
+      // Only include Next.js page files
+      if (!file.endsWith(".js")) {
+        return;
+      }
+
+      // Don't include Next.js internal/system pages
+      if (
+        file.startsWith("_") ||
+        file === "sitemap.xml.js" ||
+        file === "404.js" ||
+        file === "500.js"
+      ) {
+        return;
+      }
+
+      // Don't include dynamic route files like [slug].js
+      if (file.includes("[") || file.includes("]")) {
+        return;
+      }
+
+      let route;
+
+      // index.js becomes folder root
+      if (file === "index.js") {
+        route = routePrefix || "/";
+      } else {
+        const pageName = file.replace(/\.js$/, "");
+        route = `${routePrefix}/${pageName}`;
+      }
+
+      // Make sure route starts with one slash
+      if (!route.startsWith("/")) {
+        route = `/${route}`;
+      }
+
+      // Remove accidental duplicate slashes
+      route = route.replace(/\/+/g, "/");
+
+      // Remove trailing slash here
+      // We add it consistently when generating XML
+      if (route !== "/") {
+        route = route.replace(/\/$/, "");
+      }
+
+      routes.push(route);
+    });
+  }
+
+  scanFolder(pagesDir);
+
+  // Remove duplicate routes
+  return [...new Set(routes)].sort();
+}
 
 function generateSiteMap() {
+  const pages = getAllPages();
+
   const urls = pages
     .map((page) => {
       const finalUrl =
@@ -41,11 +84,24 @@ function generateSiteMap() {
           ? `${BASE_URL}/`
           : `${BASE_URL}${page}/`;
 
+      let priority = "0.8";
+
+      if (page === "/") {
+        priority = "1.0";
+      } else if (
+        page === "/blog" ||
+        page === "/jetblue" ||
+        page === "/expedia" ||
+        page === "/delta"
+      ) {
+        priority = "0.9";
+      }
+
       return `
   <url>
     <loc>${finalUrl}</loc>
     <changefreq>weekly</changefreq>
-    <priority>${page === "/" ? "1.0" : "0.8"}</priority>
+    <priority>${priority}</priority>
   </url>`;
     })
     .join("");
@@ -60,6 +116,11 @@ export async function getServerSideProps({ res }) {
   const sitemap = generateSiteMap();
 
   res.setHeader("Content-Type", "text/xml");
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=86400"
+  );
+
   res.write(sitemap);
   res.end();
 

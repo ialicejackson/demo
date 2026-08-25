@@ -11,10 +11,9 @@ export default function Header() {
   return (
     <header className="shadow-sm sticky-top bg-white">
       <nav className="navbar navbar-expand-lg navbar-light container py-3">
-        
         {/* Logo */}
         <Link href="/" className="navbar-brand fw-bold text-primary fs-4">
-          CloudCorp
+          GetAdvisor
         </Link>
 
         {/* Mobile Toggle */}
@@ -23,6 +22,9 @@ export default function Header() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -30,16 +32,9 @@ export default function Header() {
         {/* Nav Items */}
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-
             <li className="nav-item">
               <Link href="/" className={`nav-link ${isActive("/")}`}>
                 Home
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/microsoft-cloud" className={`nav-link ${isActive("/microsoft-cloud")}`}>
-                Microsoft Cloud
               </Link>
             </li>
 
@@ -49,43 +44,81 @@ export default function Header() {
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                Companies
+                Airlines
               </a>
+
               <ul className="dropdown-menu">
                 <li>
-                  <Link href="/azure" className="dropdown-item">
-                    Azure
+                  <Link href="/jetblue/" className="dropdown-item">
+                    JetBlue
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/dynamics-365" className="dropdown-item">
-                    Dynamics 365
+                  <Link href="/delta/" className="dropdown-item">
+                    Delta Airlines
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/power-platform" className="dropdown-item">
-                    Power Platform
+                  <Link
+                    href="/ways-to-get-allegiant-air-to-respond-quickly/"
+                    className="dropdown-item"
+                  >
+                    Allegiant Air
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/Asiana-Airlines-Contact/"
+                    className="dropdown-item"
+                  >
+                    Asiana Airlines
                   </Link>
                 </li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <Link href="/about" className={`nav-link ${isActive("/about")}`}>
-                About Us
+              <Link
+                href="/expedia/"
+                className={`nav-link ${isActive("/expedia")}`}
+              >
+                Expedia
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link href="/contact" className="btn btn-primary ms-lg-3 px-4">
-                Contact
+              <Link
+                href="/jetblue/"
+                className={`nav-link ${isActive("/jetblue")}`}
+              >
+                JetBlue
               </Link>
             </li>
 
+            <li className="nav-item">
+              <Link
+                href="/delta/"
+                className={`nav-link ${isActive("/delta")}`}
+              >
+                Delta
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                href="/about/"
+                className={`nav-link ${isActive("/about")}`}
+              >
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
-
       </nav>
     </header>
   );
