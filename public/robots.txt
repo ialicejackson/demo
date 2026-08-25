@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://getadvisior.vercel.app
+
+# Sitemaps
+Sitemap: https://getadvisior.vercel.app/sitemap.xml
